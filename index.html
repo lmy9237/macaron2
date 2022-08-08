@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>마카롱 <img src="./images/macaron_12_o.jpg"> </h1>
+            <nav class="lnb">
+                <ul>
+                    <li><a href="#">메뉴</a></li>
+                    <li><a href="#">온라인주문</a></li>
+                    <li><a href="#">Q & A</a></li>
+                    <li><a href="#">오시는길</a></li>
+                </ul>
+            </nav>
+
+            <div class="Genres">
+                    <select name="" id="select-genres">
+                        <option option="0">필링 선택</option>
+                        <option option="1">초코필링</option>
+                        <option option="1">우유필링</option>
+                        <option option="1">딸기필링</option>
+                    </select>
+            </div>
+           
+        </header>
+
+
+        <section>
+            
+                <div class="slide-container">
+                    <div class="container">
+                        <div class="inner">
+                            <img src="./images/slider01.jpg">
+                        </div>
+                        <div class="inner">
+                            <img src="./images/slider02.jpg">
+                        </div>
+                        <div class="inner">
+                            <img src="./images/slider03.jpg">
+                        </div>
+                    </div>
+                </div>
+                
+                <style>
+                    input[name='btn']{display: none;}
+                    input[name='btn']~label{font-size: 0; display: inline-block;
+                        width: 20px; height: 20px;
+                        background-color: orange;
+                    }
+                    input[name='btn']:nth-of-type(1):checked~label:nth-of-type(1){
+                        background-color: gray;
+                    }
+                    input[name='btn']:nth-of-type(2):checked~label:nth-of-type(2){
+                        background-color: gray;
+                    }
+                    input[name='btn']:nth-of-type(3):checked~label:nth-of-type(3){
+                        background-color: gray;
+                    }
+                </style>
+                <input type="radio" name="btn" id="slideCtrlBtn1" checked>
+                <input type="radio" name="btn" id="slideCtrlBtn2">
+                <input type="radio" name="btn" id="slideCtrlBtn3">
+                <label for="slideCtrlBtn1"> 첫번째이미지</label>
+                <label for="slideCtrlBtn2"> 두번째이미지</label>
+                <label for="slideCtrlBtn3"> 세번째이미지</label>
+                
+                <script>
+                    document.querySelector('#slideCtrlBtn2').addEventListener('click',function(){
+                        document.querySelector('.container').style.transform = 'translate(-800px)';
+                    })
+                
+                    document.querySelector('#slideCtrlBtn3').addEventListener('click',function(){
+                        document.querySelector('.container').style.transform = 'translate(-1600px)';
+                    })
+                
+                    document.querySelector('#slideCtrlBtn1').addEventListener('click',function(){
+                        document.querySelector('.container').style.transform = 'translate(0vw)';
+                    })
+                </script>
+
+            <div class="search_container">
+                <div class="search_box">
+                    <label for="product_search">검색하기</label>
+                    <input type="search" id="product_search">
+                </div>
+            </div>
+
+            <div class="Menu">
+                <div class="box">
+                    <h2>인기메뉴</h2>
+                </div>
+    
+                <div class="items">
+                    <div class="item">
+                        <h3><span style="color: rgb(101, 101, 101);
+                            ">쿠앤크마카롱</span></h3>
+                        <img src="./images/macaron_07.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <h3><span style="color: rgb(237, 67, 33);
+                            ">딸기 마카롱</span></h3>
+                        <img src="./images/macaron_03.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <h3><span style="color:rgb(66, 141, 79);
+                            ">녹차 마카롱</span></h3>
+                        <img src="./images/macaron_06.jpg" alt="">
+                    </div>
+                    <div class="item">
+                        <h3><span style="color: rgb(255, 191, 41);
+                            ">우유 마카롱</span></h3>
+                        <img src="./images/macaron_02.jpg" alt="">
+                    </div>
+                    
+                   
+                </div>
+            
+          
+     
+        </section>
+
+
+        <section class="video-container">
+            <h2>마카롱 만드는 과정</h2>
+            <div class="vedio">
+                <div class="item">
+                    <video autoplay muted>
+                        <source src="./movies/chocolet.mp4">
+                    </video>
+                </div>
+                <div class="item">
+                    <video autoplay muted>
+                        <source src="./movies/chocolet.mp4">
+                    </video>
+                </div>
+                <div class="item">
+                    <video autoplay muted>
+                        <source src="./movies/chocolet.mp4">
+                    </video>
+                </div>
+                
+            </div>  
+        </section>
+    </div>
+</body>
+</html>
